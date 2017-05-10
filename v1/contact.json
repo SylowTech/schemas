@@ -17,7 +17,7 @@
     },
     "content": {
       "type": "object",
-      "description": "The content of the contact card.",
+      "description": "The content of the contact card. Values are encrypted/encoded as per the `encryption` property.",
       "$ref": "http://json-schema.org/draft-06/card"
     },
     "meta": {

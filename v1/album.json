@@ -21,7 +21,7 @@
       "patternProperties": {
         "^\\d+$": {
           "$ref": "definitions/uuid.json",
-          "description": "The UUID of the document for each photo that belongs to the album, in the order it should appear in."
+          "description": "The UUID of the document for each photo that belongs to the album, in the order it should appear in. Encrypted/encoded as per the `encryption` property."
         }
       }
     },

@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
   "description": "Sylow base document schema",
-  "required": ["id", "originalEntity", "created", "mimetype", "version", "summary", "data"],
+  "required": ["id", "originalEntity", "created", "mimetype", "version", "data"],
   "properties": {
     "id": {
       "$ref": "definitions/uuid.json",
@@ -52,7 +52,7 @@
     },
     "summary": {
       "type": "object",
-      "description": "A base64-encoded summary or before-the-fold sample of data to submit with the document. Encrypted with the document's key if this document supports encryption.",
+      "description": "A base64-encoded summary or before-the-fold sample of data to submit with the document.",
       "properties": {
         "contentType": {
           "type": "string",
@@ -66,7 +66,7 @@
         },
         "data": {
           "type": "string",
-          "description": "The URL, base64-encoded string, UUID or plain text that should represent the summary of this document."
+          "description": "The URL, base64-encoded string, UUID or plain text that should represent the summary of this document. Encrypted/encoded as per the `encryption` property."
         }
       },
       "required": ["encoding", "data"],
@@ -87,7 +87,7 @@
             { "$ref": "photo.json" },
             { "$ref": "status.json" }
           ],
-          "description": "The document content. Values are encoded in base64 in transit. Encrypted with the document's key if this document supports encryption."
+          "description": "The document content."
         }
       }
     },
@@ -97,7 +97,7 @@
       "patternProperties": {
         "^\\d+$": {
           "$ref": "definitions/uuid.json",
-          "description": "The UUID of the document to which this reference points. Encrypted with the document's key if this document supports encryption."
+          "description": "The UUID of the document to which this reference points. Encrypted/encoded as per the `encryption` property."
         }
       }
     },
@@ -108,7 +108,7 @@
         "^\\d+$": {
           "type": "string",
           "format": "email",
-          "description": "The name of the entity to which this reference points. Encrypted with the document's key if this document supports encryption."
+          "description": "The name of the entity to which this reference points. Encrypted/encoded as per the `encryption` property."
         }
       }
     },

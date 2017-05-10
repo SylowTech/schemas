@@ -21,7 +21,7 @@
     },
     "content": {
       "type": "string",
-      "description": "Depending on the `encoding`, this will be either a URL pointing to an externally-hosted file, or a base64-encoded file."
+      "description": "Depending on the `encoding`, this will be either a URL pointing to an externally-hosted file, or a base64-encoded file. Encrypted/encoded as per the `encryption` property."
     },
     "meta": {
       "type": "object",

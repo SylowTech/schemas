@@ -17,7 +17,7 @@
     },
     "content": {
       "type": "string",
-      "description": "The content of the status message."
+      "description": "The content of the status message. Encrypted/encoded as per the `encryption` property."
     },
     "meta": {
       "type": "object",

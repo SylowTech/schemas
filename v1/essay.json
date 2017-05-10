@@ -17,7 +17,7 @@
     },
     "content": {
       "type": "string",
-      "description": "The content of the essay."
+      "description": "The content of the essay. Encrypted/encoded as per the `encryption` property."
     },
     "meta": {
       "type": "object",
