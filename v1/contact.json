@@ -1,6 +1,6 @@
 {
   "$id": "https://sylow.network/schemas/v1/contact.json",
-  "$schema": "https://json-schema.org/draft-06/schema",
+  "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
   "description": "Sylow contact card schema",
   "required": ["created", "updated", "content"],
@@ -18,7 +18,7 @@
     "content": {
       "type": "object",
       "description": "The content of the contact card.",
-      "$ref": "https://json-schema.org/draft-06/card"
+      "$ref": "http://json-schema.org/draft-06/card"
     },
     "meta": {
       "type": "object",

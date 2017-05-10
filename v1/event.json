@@ -1,6 +1,6 @@
 {
   "$id": "https://sylow.network/schemas/v1/event.json",
-  "$schema": "https://json-schema.org/draft-06/schema",
+  "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
   "description": "Sylow event document schema",
   "required": ["created", "updated", "content"],
@@ -18,7 +18,7 @@
     "content": {
       "type": "object",
       "description": "The details of the event.",
-      "$ref": "https://json-schema.org/draft-06/calendar"
+      "$ref": "http://json-schema.org/draft-06/calendar"
     },
     "meta": {
       "type": "object",

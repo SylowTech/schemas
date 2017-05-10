@@ -1,6 +1,6 @@
 {
   "$id": "https://sylow.network/schemas/v1/photo.json",
-  "$schema": "https://json-schema.org/draft-06/schema",
+  "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
   "description": "Sylow photo document schema",
   "required": ["created", "updated", "mimetype", "encoding", "content"],

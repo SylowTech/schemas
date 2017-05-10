@@ -1,6 +1,6 @@
 {
   "$id": "https://sylow.network/schemas/v1/device.json",
-  "$schema": "https://json-schema.org/draft-06/schema",
+  "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
   "description": "Sylow entity device schema",
   "required": ["id", "entityId", "deviceName", "keypair", "created"],
@@ -23,7 +23,7 @@
     },
     "keypair": {
       "$ref": "definitions/keypair.json",
-      "description": "Keychain for public/private keys associated with this device.",
+      "description": "Keychain for public/private keys associated with this device."
     },
     "created": {
       "type": "string",

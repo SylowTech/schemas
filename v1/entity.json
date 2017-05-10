@@ -1,6 +1,6 @@
 {
   "$id": "https://sylow.network/schemas/v1/entity.json",
-  "$schema": "https://json-schema.org/draft-06/schema",
+  "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
   "description": "Sylow entity profile schema",
   "required": ["id", "entityName", "keypair", "created"],
@@ -20,7 +20,7 @@
     },
     "keypair": {
       "$ref": "definitions/keypair.json",
-      "description": "Keychain for public/private keys associated with this entity.",
+      "description": "Keychain for public/private keys associated with this entity."
     },
     "created": {
       "type": "string",
