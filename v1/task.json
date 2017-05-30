@@ -19,6 +19,19 @@
       "type": "string",
       "description": "Text description of the task. Encrypted/encoded as per the `encryption` property."
     },
+    "taskDue": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp with zone for when this task is due to be completed."
+    },
+    "status": {
+      "type": "string",
+      "description": "A current status attached to this task, if necessary."
+    },
+    "assignedTo": {
+      "$ref": "definitions/uuid.json",
+      "description": "The UUID of a Sylow entity that is tasked with completing this task, if necessary."
+    },
     "meta": {
       "type": "object",
       "description": "Additional metadata to provide along with the document.",

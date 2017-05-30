@@ -1,8 +1,8 @@
 {
-  "$id": "https://sylow.network/schemas/v1/tasklist.json",
+  "$id": "https://sylow.network/schemas/v1/taskboard.json",
   "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
-  "description": "Sylow task list schema",
+  "description": "Sylow task board schema",
   "required": ["created", "updated", "name", "contents"],
   "properties": {
     "created": {
@@ -17,15 +17,15 @@
     },
     "name": {
       "type": "string",
-      "description": "The name of the task list."
+      "description": "The name of the task board."
     },
     "contents": {
       "type": "object",
-      "description": "An object representing a list of each task that belongs to this list, in order.",
+      "description": "An object representing a list of each task list that belongs to this board, in order.",
       "patternProperties": {
         "^\\d+$": {
           "$ref": "definitions/uuid.json",
-          "description": "The UUID of the document for each task that belongs to the list, in the order it should appear in. Encrypted/encoded as per the `encryption` property."
+          "description": "The UUID of the document for each task list that belongs to the board, in the order it should appear in. Encrypted/encoded as per the `encryption` property."
         }
       }
     },
