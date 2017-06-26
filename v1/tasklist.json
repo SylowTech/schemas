@@ -1,8 +1,8 @@
 {
-  "$id": "https://sylow.network/schemas/v1/album.json",
+  "$id": "https://sylow.network/schemas/v1/tasklist.json",
   "$schema": "http://json-schema.org/draft-06/schema",
   "type": "object",
-  "description": "Sylow photo album schema",
+  "description": "Sylow task list schema",
   "required": ["created", "updated", "name", "contents"],
   "properties": {
     "created": {
@@ -17,15 +17,15 @@
     },
     "name": {
       "type": "string",
-      "description": "The name of the photo album."
+      "description": "The name of the task list."
     },
     "contents": {
       "type": "object",
-      "description": "An object representing a list of each photo that belongs to this album, in order.",
+      "description": "An object representing a list of each task that belongs to this list, in order.",
       "patternProperties": {
         "^\\d+$": {
           "$ref": "definitions/uuid.json",
-          "description": "The UUID of the document for each photo that belongs to the album, in the order it should appear in. Encrypted/encoded as per the `encryption` property."
+          "description": "The UUID of the document for each task that belongs to the list, in the order it should appear in. Encrypted/encoded as per the `encryption` property."
         }
       }
     },
