@@ -21,7 +21,7 @@ fi
 echo "site path: $site_path ✓"
 
 echo "zipping site to site.zip..."
-(zip -r - "v*") > site.zip 2>/dev/null
+(zip -r - . -i "v*") > site.zip 2>/dev/null
 
 echo "decrypting ssh key..."
 openssl aes-256-cbc -k "$deploy_key_pass" -in deploy/deploy_key.enc -out deploy/deploy_key -d
