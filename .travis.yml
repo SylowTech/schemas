@@ -1,0 +1,12 @@
+sudo: false
+env:
+  global:
+  - domain: alpha.coderouge.co
+  - site_path: "/var/www/sylow/network/schemas"
+  - secure: SkWwSiuXcdJHJUwbJ9n1SI/GXf8wUyCBIMG7LM8cJWiO1hTp7ccrJS1JPJA+B9AnFIzxOV1vRVuSFpjUjhk1XlOH3DOJRReE8O9CR3wbDGE7kpi2ZH2GegRtSZzVmbFf6EzHyRtxB1zsBrHHtB0e7/NE94uC1exVIHp96Y+1D8Kb8DPCc9r+XZwsUAv1U2x9heFuILQo6aZujEROiclsvyaTXoDjPootbF6X+DyMRPXgTOI7EdU15n29DqyE9XS6pmzXmQS+tPqgRQJH0khgVi+k1bakbn8Rc7baVSfd0hoTy2XlS3a00pz5nZehTFHyU52h59UTgst1xyjlEK/T4H0R7neyzaulSbAXiEMx0P8VScjBTSKQNf8jTujyoO9iH8trVmTWWE6bX8VLokpGM8PeJ2kr5rDPS31McgUo4kP3Ft8yspAKfC+A3npDgeyqApidWuj3bjr1AceLcIEb9/0E9Hgie59ruL46JnPOQPupV5x2m58LWFkR4LX38YYwK3m6zXWAFn6coVpZqkKm6H3+95cI9AIp23AFjxBFQyThFlYxOcnly3TQifZcxVzjjUiIVOktB5j1LAdAjC2vwswqhYf290T9XoxQuWhvBg95+9bgIiEVXml+q6V7cc5NmfDWfX9T714ezXjoeUOV/DpAjlD+QwIEvF2QPoutGNU=
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: "./deploy/deploy.sh"
+  on:
+    branch: master
